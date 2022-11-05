@@ -13,7 +13,7 @@ int numToDisplay;
 
 int setTimer = 1000;
 
-int timerFree = 3000;
+int timerFree = 10000;
 
 void fsm_simple_button_run() {
 	switch (state) {

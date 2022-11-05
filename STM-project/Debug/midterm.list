@@ -585,7 +585,7 @@ void getKeyDCInput() {
 
 int setTimer = 1000;
 
-int timerFree = 3000;
+int timerFree = 10000;
 
 void fsm_simple_button_run() {
  8000470:	b580      	push	{r7, lr}
@@ -1655,6 +1655,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
  8000ae8:	f7ff fbc4 	bl	8000274 <getKeyINCInput>
 	getKeyDCInput();
  8000aec:	f7ff fc50 	bl	8000390 <getKeyDCInput>
+
+	//Led blinky
 	if (counter < 100) {
  8000af0:	4b0b      	ldr	r3, [pc, #44]	; (8000b20 <HAL_TIM_PeriodElapsedCallback+0x48>)
  8000af2:	681b      	ldr	r3, [r3, #0]
